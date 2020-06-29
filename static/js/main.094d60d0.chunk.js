@@ -1,2 +1,0 @@
-(this["webpackJsonpbinary-clock"]=this["webpackJsonpbinary-clock"]||[]).push([[0],{3:function(e,n,t){e.exports=t(9)},8:function(e,n,t){},9:function(e,n,t){"use strict";t.r(n);var c=t(0),l=t.n(c),r=t(2),o=t.n(r);function a(){return l.a.createElement("div",null,l.a.createElement("p",null,"Hello, World"))}t(8);o.a.render(l.a.createElement(a,null),document.getElementById("root"))}},[[3,1,2]]]);
-//# sourceMappingURL=main.094d60d0.chunk.js.map
