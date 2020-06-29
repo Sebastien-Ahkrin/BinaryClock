@@ -7,7 +7,13 @@ export default function App (): JSX.Element {
   useEffect(() => {
     setInterval(() => {
       const date = new Date()
-      setState([0, 0, 0, 0, Number(date.getMilliseconds().toString().split('')[0])])
+      setState([
+        Number(date.getHours().toString().split('')[0]),
+        Number(date.getHours().toString().split('')[1]),
+        Number(date.getMinutes().toString().split('')[0]),
+        Number(date.getMinutes().toString().split('')[1]),
+        Number(date.getMilliseconds().toString().split('')[0])
+      ])
     }, 100)
   }, [])
   
