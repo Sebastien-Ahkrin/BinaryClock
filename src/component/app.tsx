@@ -19,7 +19,7 @@ export default function App (): JSX.Element {
         twoDigit(date.getSeconds().toString().padStart(2, '0').split('')[0]),
         twoDigit(date.getSeconds().toString().padStart(2, '0').split('')[1])
       ])
-    }, 100)
+    }, 1000)
   }, [])
 
   return (
