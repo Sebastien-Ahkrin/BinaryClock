@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Column from './column'
 
+function twoDigit (value: string): number {
+  return isNaN(Number(value)) ? 0 : Number(value)
+}
+
 export default function App (): JSX.Element {
   const [state, setState] = useState<number[]>([0, 0, 0, 0, 0, 0])
 
@@ -8,16 +12,15 @@ export default function App (): JSX.Element {
     setInterval(() => {
       const date = new Date()
       setState([
-        Number(date.getHours().toString().split('')[0]),
-        Number(date.getHours().toString().split('')[1]),
-        Number(date.getMinutes().toString().split('')[0]),
-        Number(date.getMinutes().toString().split('')[1]),
-        Number(date.getSeconds().toString().split('')[0]),
-        Number(date.getSeconds().toString().split('')[1])
+        twoDigit(date.getHours().toString().padStart(2, '0').split('')[0]),
+        twoDigit(date.getHours().toString().padStart(2, '0').split('')[1]),
+        twoDigit(date.getMinutes().toString().padStart(2, '0').split('')[0]),
+        twoDigit(date.getMinutes().toString().padStart(2, '0').split('')[1]),
+        twoDigit(date.getSeconds().toString().padStart(2, '0').split('')[0]),
+        twoDigit(date.getSeconds().toString().padStart(2, '0').split('')[1])
       ])
     }, 100)
   }, [])
-  
 
   return (
     <div className="flex content-center flex-wrap justify-center container mx-auto h-screen">
