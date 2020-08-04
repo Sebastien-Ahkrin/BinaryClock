@@ -5,6 +5,8 @@ function twoDigit (value: string): number {
   return isNaN(Number(value)) ? 0 : Number(value)
 }
 
+// Hello, Woorld!
+
 export default function App (): JSX.Element {
   const [state, setState] = useState<number[]>([0, 0, 0, 0, 0, 0])
 
@@ -23,7 +25,7 @@ export default function App (): JSX.Element {
   }, [])
 
   return (
-    <div className="flex content-center flex-wrap justify-center container mx-auto h-screen">
+    <div className="container flex flex-wrap content-center justify-center h-screen mx-auto">
       {Array(6).fill(0).map((_, index) => <Column key={index} representation={state[index]}/>)}
     </div>
   )
